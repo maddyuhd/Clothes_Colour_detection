@@ -4,7 +4,7 @@ import argparse
 import cv2 
 import numpy as np
 import time as t
-from pprint import pprint
+from pprint import pprintsure
 from sklearn.cluster import KMeans
 
 
@@ -187,7 +187,7 @@ if (len(rects) !=0):
                 print "------------- Raw Pixel Data -------------"
                 print "------------------------------------------"
                 print "rbg val :", clt.cluster_centers_.tolist()
-                show(roi_color)
+                # show(roi_color)
             
             break
 
@@ -210,7 +210,7 @@ if (len(rects) !=0):
                 print "------------- Raw Pixel Data -------------"
                 print "------------------------------------------"
                 print "rbg val :", clt.cluster_centers_.tolist()
-                show(roi_color)
+                # show(roi_color)
             break
 
 
@@ -249,7 +249,7 @@ else:
                 print "------------- Raw Pixel Data -------------"
                 print "------------------------------------------"
                 print "rbg val :", clt.cluster_centers_.tolist()
-                show(roi_color)
+                # show(roi_color)
 
     else :
 
@@ -270,7 +270,7 @@ else:
             print "------------- Raw Pixel Data -------------"
             print "------------------------------------------"
             print "rbg val :", clt.cluster_centers_.tolist()
-            show(roi_color)
+            # show(roi_color)
 
 #convert float to int
 for i in result:
