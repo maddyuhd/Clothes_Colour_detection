@@ -4,7 +4,6 @@ import argparse
 import cv2 
 import numpy as np
 import time as t
-from pprint import pprintsure
 from sklearn.cluster import KMeans
 
 
@@ -272,20 +271,22 @@ else:
             print "rbg val :", clt.cluster_centers_.tolist()
             # show(roi_color)
 
-#convert float to int
-for i in result:
-    result[i]= [int(j) for j in result[i]]
-
-#sort the data 
-final_idx = sorted(result, key=result.get, reverse=True)[:number_of_outputs]
 
 if (args["debug"]):
     print "                                          "
     print " Final result : "
     print "[ R , G , B ] <-- Highest likelihood"
 
-for indx in final_idx:
-    print result[indx] 
+#convert float to int
+for i in result:
+    result[i]= [int(j) for j in result[i]]
+
+#sort the data 
+final = sorted(result.items())
+
+print final[2][1]
+print final[1][1]
+print final[0][1]
 
 if (args["debug"]):
     show(resized)
